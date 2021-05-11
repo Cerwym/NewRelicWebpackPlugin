@@ -11,10 +11,9 @@ jobs:
     - stage: test
       script:
         - npm run test:prod
-    - stage: build
-      script:
-        - npm run build
-    - stage: release
+    - stage: 'Build and Release'
       if: branch = main AND type != pull_request
       script:
+        - npm run build
         - npm run semantic-release
+
