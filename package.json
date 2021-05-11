@@ -45,7 +45,8 @@
     }
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "pkgRoot": "dist"
   },
   "jest": {
     "transform": {
