@@ -80,6 +80,9 @@
       "@commitlint/config-conventional"
     ]
   },
+  "release": {
+    "branches": ["main", "next"]
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
