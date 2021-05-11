@@ -1,5 +1,5 @@
 {
-  "name": "newrelicwebpackplugin",
+  "name": "@cerwym/newrelic-webpack-plugin",
   "version": "0.0.0-development",
   "description": "",
   "repository": "git://github.com/Cerwym/NewRelicWebpackPlugin.git",
