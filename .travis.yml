@@ -5,15 +5,17 @@ cache:
 notifications:
   email: false
 node_js:
-  - '16'
   - '14'
-  - '10'
-script:
-  - npm run test:prod && npm run build
-after_success:
-  - npm run travis-deploy-once --pro "npm run report-coverage"
-  - if [ "$TRAVIS_BRANCH" = "main" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run travis-deploy-once --pro "npm run deploy-docs"; fi
-  - if [ "$TRAVIS_BRANCH" = "main" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run travis-deploy-once --pro "npm run semantic-release"; fi
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run test:prod
+    - stage: build
+      script:
+        - npm run build
+        - npm run report-covergae
+    - stage: release
+      if: branch = master AND type != pull_request
+      script:
+        - npm run semantic-release
