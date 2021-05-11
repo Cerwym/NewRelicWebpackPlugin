@@ -1,8 +1,4 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-  // import "core-js/fn/array.find"
-  // ...
-
-import { Compilation, Compiler, Stats, StatsAsset } from 'webpack';
+import { Compilation, Compiler, Stats } from 'webpack';
 import * as fs from 'fs'
 
 export interface Options {
