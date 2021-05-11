@@ -45,7 +45,7 @@
     }
   },
   "publishConfig": {
-    "access": "public",
+    "access": "public"
   },
   "jest": {
     "transform": {
