@@ -16,6 +16,6 @@ jobs:
         - npm run build
         - npm run report-covergae
     - stage: release
-      if: branch = master AND type != pull_request
+      if: branch = main AND type != pull_request
       script:
         - npm run semantic-release
