@@ -14,7 +14,7 @@ jobs:
     - stage: build
       script:
         - npm run build
-        - npm run report-covergae
+        - npm run report-coverage
     - stage: release
       if: branch = main AND type != pull_request
       script:
